@@ -13,11 +13,20 @@ import { CategorySection } from './comp/category-section/category-section';
 import { PromoPrd } from './comp/promo-prd/promo-prd';
 import { CategoryBlock } from './comp/category-block/category-block';
 import { Featuers } from './comp/featuers/featuers';
+import { PromotionBanner } from './comp/promotion-banner/promotion-banner';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeroProdSection, CategorySection, PromoPrd, CategoryBlock, Featuers],
+  imports: [
+    CommonModule,
+    HeroProdSection,
+    CategorySection,
+    PromoPrd,
+    CategoryBlock,
+    Featuers,
+    PromotionBanner,
+  ],
   templateUrl: './home.html',
 })
 export class Home {
@@ -39,12 +48,12 @@ export class Home {
   }
 
   private loadStore() {
-    this.storeService.getStore().subscribe((data: StoreData) => {
-      console.log(data, 'check_data');
+    this.storeService.filteredStore$.subscribe((data: StoreData) => {
       this.heroBanners = data.heroBanners;
       this.heroSidePromos = data.heroSidePromos;
       this.heroSaleBanner = data.herSaleBanner;
       this.heroBottomPromos = data.heroBottomPromos;
+
       this.product = data.products;
       this.category = data.categories;
       this.promoProduct = data.promoProducts;

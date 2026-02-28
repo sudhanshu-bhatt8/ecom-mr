@@ -1,7 +1,7 @@
 <div class="bg-black">
   <div class="max-w-[1680px] mx-auto px-6 flex items-center justify-between h-20">
     <!-- Logo -->
-    <div class="text-white text-2xl font-semibold">Website</div>
+    <div class="text-white text-2xl font-semibold"></div>
 
     <!-- Search Panel -->
     <div class="flex items-center bg-white rounded-md overflow-hidden h-12 w-[600px]">
@@ -18,13 +18,16 @@
         [value]="selectedCategory"
         (change)="selectCategory($event)"
       >
-        <option value="all">All</option>
+        <option [value]="0">All</option>
         <option *ngFor="let cat of categories" [value]="cat.id">
           {{ cat.name }}
         </option>
       </select>
 
-      <button class="bg-green-500 hover:bg-green-600 text-white text-sm font-medium px-6 h-full">
+      <button
+        (click)="manualSearch()"
+        class="bg-green-500 hover:bg-green-600 text-white text-sm font-medium px-6 h-full"
+      >
         Search
       </button>
     </div>

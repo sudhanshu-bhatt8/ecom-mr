@@ -25,7 +25,7 @@ export class SearchSection implements OnInit {
   searchControl = new FormControl<string>('');
 
   // ✅ Correct union type
-  selectedCategory: 'all' | number = 'all';
+  selectedCategory: number = 0;
 
   categories: CategoryType[] = [];
 
@@ -46,27 +46,39 @@ export class SearchSection implements OnInit {
     });
 
     // Debounced search
+    // 🔥 SEARCH INPUT LISTENER
     this.searchControl.valueChanges
       .pipe(debounceTime(400), distinctUntilChanged())
       .subscribe((value) => {
-        this.updateSearchState(value ?? '');
+        this.pushSearch(value ?? '');
       });
+  }
+
+  private pushSearch(term: string) {
+    this.storeService.updateSearch({
+      term: term.trim().toLowerCase(),
+      category: this.selectedCategory,
+    });
   }
 
   // ✅ Fully type-safe
   private updateSearchState(term: string): void {
-    const criteria: SearchCriteria = {
+    this.storeService.updateSearch({
       term: term.trim().toLowerCase(),
       category: this.selectedCategory,
-    };
+    });
   }
 
   // ✅ Convert string from DOM to correct union type
   selectCategory(event: Event): void {
-    const value = (event.target as HTMLSelectElement).value;
+    const value = Number((event.target as HTMLSelectElement).value);
 
-    this.selectedCategory = value === 'all' ? 'all' : Number(value);
+    this.selectedCategory = value;
 
     this.updateSearchState(this.searchControl.value ?? '');
+  }
+
+  manualSearch(): void {
+    this.pushSearch(this.searchControl.value ?? '');
   }
 }

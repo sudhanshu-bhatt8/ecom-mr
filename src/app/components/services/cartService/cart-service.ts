@@ -38,14 +38,15 @@ export class CartService {
     const existing = this.cartItems.find((item) => item.id === product.id);
 
     if (existing) {
-      existing.quantity += 1;
-    } else {
-      this.cartItems.push({ ...product, quantity: 1 });
+      alert('Product already added to cart');
+      return;
     }
 
+    this.cartItems.push({ ...product, quantity: 1 });
     this.saveCart();
-  }
 
+    alert('Product added to cart successfully');
+  }
   removeFromCart(productId: string) {
     this.cartItems = this.cartItems.filter((item) => item.id !== productId);
     this.saveCart();

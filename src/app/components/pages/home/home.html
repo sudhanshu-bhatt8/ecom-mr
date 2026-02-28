@@ -19,6 +19,12 @@
 }
 
 <!-- promotion banner -->
+<app-promotion-banner
+  [title]="'FASHIONABLE WALLETS'"
+  [subtitle]="'BIG GOOD SALE FOR HER'"
+  [imageUrl]="heroSaleBanner.image"
+  [buttonText]="'Order Now'"
+></app-promotion-banner>
 
 @if (groupedCategories.length && category) {
   @for (group of groupedCategories; track group.category.id) {

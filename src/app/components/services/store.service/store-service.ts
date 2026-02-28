@@ -27,7 +27,7 @@ export interface StoreData {
 
 interface SearchCriteria {
   term: string;
-  category: string;
+  category: number;
 }
 
 @Injectable({
@@ -38,7 +38,7 @@ export class StoreService {
 
   private searchSubject = new BehaviorSubject<SearchCriteria>({
     term: '',
-    category: 'all',
+    category: 0,
   });
 
   search$ = this.searchSubject.asObservable();
@@ -50,6 +50,28 @@ export class StoreService {
   getStore(): Observable<StoreData> {
     return this.storeData$;
   }
+
+  updateSearch(criteria: SearchCriteria): void {
+    this.searchSubject.next(criteria);
+  }
+
+  filteredStore$ = combineLatest([this.storeData$, this.search$]).pipe(
+    map(([store, search]) => {
+      const filteredProducts = store.products.filter((product) => {
+        const matchesTerm = !search.term || product.title.toLowerCase().includes(search.term);
+
+        const matchesCategory = search.category === 0 || product.categoryId === search.category;
+
+        return matchesTerm && matchesCategory;
+      });
+
+      return {
+        ...store,
+        products: filteredProducts,
+      };
+    }),
+    shareReplay(1),
+  );
 
   getCategories(): Observable<CategoryType[]> {
     return this.storeData$.pipe(map((data) => data.categories));
