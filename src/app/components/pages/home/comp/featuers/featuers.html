@@ -1,0 +1,22 @@
+<!-- FEATURES SECTION -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 my-12">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    @for (feature of features; track feature.title) {
+      <div class="rounded-xl p-8 sm:p-10 text-center">
+        <div class="flex justify-center mb-4">
+          <mat-icon class="text-green-500 text-4xl">
+            {{ feature.icon }}
+          </mat-icon>
+        </div>
+
+        <h3 class="font-semibold text-base mb-2">
+          {{ feature.title }}
+        </h3>
+
+        <p class="text-sm text-gray-500">
+          {{ feature.description }}
+        </p>
+      </div>
+    }
+  </div>
+</section>
