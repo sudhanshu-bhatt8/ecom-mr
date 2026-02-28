@@ -64,19 +64,7 @@
           },
           "defaultConfiguration": "production"
         },
-        "serve": {
-          "builder": "@ngx-env/builder:dev-server",
-          "configurations": {
-            "production": {
-              "buildTarget": "ecom-mr:build:production"
-            },
-            "development": {
-              "buildTarget": "ecom-mr:build:development"
-            }
-          },
-          "defaultConfiguration": "development",
-          "options": {}
-        },
+
         "extract-i18n": {
           "builder": "@ngx-env/builder:extract-i18n",
           "options": {}
