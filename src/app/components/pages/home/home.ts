@@ -12,11 +12,12 @@ import {
 import { CategorySection } from './comp/category-section/category-section';
 import { PromoPrd } from './comp/promo-prd/promo-prd';
 import { CategoryBlock } from './comp/category-block/category-block';
+import { Featuers } from './comp/featuers/featuers';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeroProdSection, CategorySection, PromoPrd, CategoryBlock],
+  imports: [CommonModule, HeroProdSection, CategorySection, PromoPrd, CategoryBlock, Featuers],
   templateUrl: './home.html',
 })
 export class Home {
@@ -40,7 +41,6 @@ export class Home {
   private loadStore() {
     this.storeService.getStore().subscribe((data: StoreData) => {
       console.log(data, 'check_data');
-      debugger;
       this.heroBanners = data.heroBanners;
       this.heroSidePromos = data.heroSidePromos;
       this.heroSaleBanner = data.herSaleBanner;

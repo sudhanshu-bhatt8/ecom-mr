@@ -5,7 +5,7 @@
       "subtitle": "New Product",
       "title": "HAND WATCH ROSSINI",
       "buttonText": "Buy Now",
-      "image": "assets/images/banners/hero-1.jpg"
+      "image": "https://placehold.co/1200x600/f3f4f6/9ca3af?text=Hand+Watch+Rossini"
     }
   ],
 
@@ -14,58 +14,31 @@
       "id": "side-1",
       "title": "Black Friday",
       "subtitle": "Buy 1 Get 1",
-      "image": "assets/images/banners/side-1.jpg"
+      "image": "https://placehold.co/500x500/f3f4f6/9ca3af?text=Black+Friday"
     },
     {
       "id": "side-2",
       "title": "ION Alkaline",
       "subtitle": "Micronutrient Supplements",
-      "image": "assets/images/banners/side-2.jpg"
+      "image": "https://placehold.co/500x500/f3f4f6/9ca3af?text=ION+Alkaline"
     }
   ],
 
   "heroBottomPromos": [
-  {
-    "id": "bottom-1",
-    "category": "Wine",
-    "title": "Drunkenness",
-    "subtitle": "Deep Flavor"
-  },
-  {
-    "id": "bottom-2",
-    "category": "Cosmetic",
-    "title": "MAXIMI",
-    "subtitle": "Sale 50%"
-  },
-  {
-    "id": "bottom-3",
-    "category": "Sunglasses",
-    "title": "Authentic",
-    "subtitle": "Sale off 50%"
-  },
-  {
-    "id": "bottom-4",
-    "category": "Hand Wash",
-    "title": "Clean hands",
-    "subtitle": "Clean bacteria"
-  },
-  {
-    "id": "bottom-5",
-    "category": "Fashion",
-    "title": "Nice bag",
-    "subtitle": "Nice style"
-  }
-] , 
+    { "id": "bottom-1", "category": "Wine", "title": "Drunkenness", "subtitle": "Deep Flavor" },
+    { "id": "bottom-2", "category": "Cosmetic", "title": "MAXIMI", "subtitle": "Sale 50%" },
+    { "id": "bottom-3", "category": "Sunglasses", "title": "Authentic", "subtitle": "Sale off 50%" },
+    { "id": "bottom-4", "category": "Hand Wash", "title": "Clean hands", "subtitle": "Clean bacteria" },
+    { "id": "bottom-5", "category": "Fashion", "title": "Nice bag", "subtitle": "Nice style" }
+  ],
 
-  "herSaleBanner" : 
-    {
-      "id": "saleSide-1",   
-      "product" : "Azus" ,
-      "title": "Laptop Gaming",
-      "subtitle": "Supper Sale",
-      "image": "assets/images/banners/saleSide-1.jpg"
-    }
-   , 
+  "herSaleBanner": {
+    "id": "saleSide-1",
+    "product": "Azus",
+    "title": "Laptop Gaming",
+    "subtitle": "Supper Sale",
+    "image": "https://placehold.co/600x600/f3f4f6/9ca3af?text=Laptop+Gaming"
+  },
 
   "categories": [
     { "id": 1, "name": "Technology", "icon": "memory" },
@@ -83,16 +56,16 @@
       "price": 2149.99,
       "oldPrice": 2499.99,
       "categoryId": 1,
-      "image": "assets/images/products/tech-1.jpg",
+      "image": "https://placehold.co/600x600/f3f4f6/9ca3af?text=Macbook+Pro+2020",
       "stock": 120,
       "badge": "sale"
     },
     {
       "id": "tech-2",
       "title": "Apple Macbook Air M2",
-      "price": 1099.00,
+      "price": 1099.0,
       "categoryId": 1,
-      "image": "assets/images/products/tech-2.jpg",
+      "image": "https://placehold.co/600x600/f3f4f6/9ca3af?text=Macbook+Air+M2",
       "stock": 80,
       "badge": "new"
     },
@@ -101,7 +74,7 @@
       "title": "Apple Watch Series 5",
       "price": 517.79,
       "categoryId": 2,
-      "image": "assets/images/products/watch-1.jpg",
+      "image": "https://placehold.co/600x600/f3f4f6/9ca3af?text=Apple+Watch+Series+5",
       "stock": 150,
       "badge": "hot"
     },
@@ -110,7 +83,7 @@
       "title": "Hand Watch Rossini",
       "price": 193.31,
       "categoryId": 2,
-      "image": "assets/images/products/watch-2.jpg",
+      "image": "https://placehold.co/600x600/f3f4f6/9ca3af?text=Hand+Watch+Rossini",
       "stock": 60
     },
     {
@@ -118,7 +91,7 @@
       "title": "Skin Care Cream",
       "price": 29.99,
       "categoryId": 3,
-      "image": "assets/images/products/cos-1.jpg",
+      "image": "https://placehold.co/600x600/f3f4f6/9ca3af?text=Skin+Care+Cream",
       "stock": 200,
       "badge": "new"
     },
@@ -128,7 +101,7 @@
       "price": 49.99,
       "oldPrice": 69.99,
       "categoryId": 3,
-      "image": "assets/images/products/cos-2.jpg",
+      "image": "https://placehold.co/600x600/f3f4f6/9ca3af?text=Luxury+Face+Serum",
       "stock": 140,
       "badge": "sale"
     },
@@ -137,7 +110,7 @@
       "title": "Luxury Apartment NYC",
       "price": 450000,
       "categoryId": 4,
-      "image": "assets/images/products/estate-1.jpg",
+      "image": "https://placehold.co/600x600/f3f4f6/9ca3af?text=Luxury+Apartment",
       "stock": 5
     },
     {
@@ -145,7 +118,7 @@
       "title": "Beach House California",
       "price": 820000,
       "categoryId": 4,
-      "image": "assets/images/products/estate-2.jpg",
+      "image": "https://placehold.co/600x600/f3f4f6/9ca3af?text=Beach+House",
       "stock": 2
     },
     {
@@ -153,7 +126,7 @@
       "title": "Premium Chocolate Box",
       "price": 59.99,
       "categoryId": 5,
-      "image": "assets/images/products/food-1.jpg",
+      "image": "https://placehold.co/600x600/f3f4f6/9ca3af?text=Chocolate+Box",
       "stock": 300
     },
     {
@@ -161,7 +134,7 @@
       "title": "Luxury Organic Honey",
       "price": 24.99,
       "categoryId": 5,
-      "image": "assets/images/products/food-2.jpg",
+      "image": "https://placehold.co/600x600/f3f4f6/9ca3af?text=Organic+Honey",
       "stock": 180
     },
     {
@@ -169,7 +142,7 @@
       "title": "Designer Handbag",
       "price": 299.99,
       "categoryId": 6,
-      "image": "assets/images/products/fashion-1.jpg",
+      "image": "https://placehold.co/600x600/f3f4f6/9ca3af?text=Designer+Handbag",
       "stock": 75,
       "badge": "hot"
     },
@@ -179,7 +152,7 @@
       "price": 499.99,
       "oldPrice": 599.99,
       "categoryId": 6,
-      "image": "assets/images/products/fashion-2.jpg",
+      "image": "https://placehold.co/600x600/f3f4f6/9ca3af?text=Leather+Jacket",
       "stock": 40,
       "badge": "sale"
     }
@@ -191,7 +164,7 @@
       "title": "Apple Macbook Air 2020",
       "price": 1099,
       "oldPrice": 1299,
-      "image": "assets/images/products/tech-2.jpg",
+      "image": "https://placehold.co/600x600/f3f4f6/9ca3af?text=Macbook+Air+2020",
       "stock": 300,
       "sold": 120
     },
@@ -200,30 +173,15 @@
       "title": "Apple Watch Series 5",
       "price": 514.51,
       "oldPrice": 599.99,
-      "image": "assets/images/products/watch-1.jpg",
+      "image": "https://placehold.co/600x600/f3f4f6/9ca3af?text=Apple+Watch+Series+5",
       "stock": 300,
       "sold": 180
     }
   ],
 
   "features": [
-    {
-      "id": "feature-1",
-      "title": "Free Shipping",
-      "description": "Free shipping on all orders over $100",
-      "icon": "local_shipping"
-    },
-    {
-      "id": "feature-2",
-      "title": "Cash Back",
-      "description": "100% money back guarantee",
-      "icon": "paid"
-    },
-    {
-      "id": "feature-3",
-      "title": "24/7 Support",
-      "description": "Dedicated support team",
-      "icon": "support_agent"
-    }
+    { "id": "feature-1", "title": "Free Shipping", "description": "Free shipping on all orders over $100", "icon": "local_shipping" },
+    { "id": "feature-2", "title": "Cash Back", "description": "100% money back guarantee", "icon": "paid" },
+    { "id": "feature-3", "title": "24/7 Support", "description": "Dedicated support team", "icon": "support_agent" }
   ]
 }

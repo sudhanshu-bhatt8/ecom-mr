@@ -1,16 +1,17 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { BehaviorSubject, combineLatest, map, shareReplay } from 'rxjs';
 import { Observable } from 'rxjs';
 
 import {
   CategoryType,
-  FeatureType,
   HeroBanner,
   heroBottomPromos,
   HeroSaleBanner,
   HeroSidePromo,
   ProductType,
   PromoProductType,
+  FeatureType,
 } from '../../../type/her.type';
 
 export interface StoreData {
@@ -24,13 +25,33 @@ export interface StoreData {
   features: FeatureType[];
 }
 
+interface SearchCriteria {
+  term: string;
+  category: string;
+}
+
 @Injectable({
   providedIn: 'root',
 })
 export class StoreService {
+  private _httpClient = inject(HttpClient);
+
+  private searchSubject = new BehaviorSubject<SearchCriteria>({
+    term: '',
+    category: 'all',
+  });
+
+  search$ = this.searchSubject.asObservable();
+
+  private storeData$ = this._httpClient.get<StoreData>('/data/store.json').pipe(shareReplay(1));
+
   constructor(private http: HttpClient) {}
 
   getStore(): Observable<StoreData> {
-    return this.http.get<StoreData>('/data/store.json');
+    return this.storeData$;
+  }
+
+  getCategories(): Observable<CategoryType[]> {
+    return this.storeData$.pipe(map((data) => data.categories));
   }
 }

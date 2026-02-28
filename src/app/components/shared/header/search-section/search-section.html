@@ -8,14 +8,21 @@
       <input
         type="text"
         placeholder="What are you looking for?"
+        [formControl]="searchControl"
         class="flex-1 px-4 text-sm outline-none text-gray-700"
       />
 
-      <div
-        class="border-l border-gray-200 px-4 text-sm text-gray-600 bg-gray-50 h-full flex items-center cursor-pointer"
+      <select
+        #categorySelect
+        class="border-l border-gray-200 px-4 text-sm text-gray-600 bg-gray-50 h-full outline-none cursor-pointer"
+        [value]="selectedCategory"
+        (change)="selectCategory($event)"
       >
-        Category
-      </div>
+        <option value="all">All</option>
+        <option *ngFor="let cat of categories" [value]="cat.id">
+          {{ cat.name }}
+        </option>
+      </select>
 
       <button class="bg-green-500 hover:bg-green-600 text-white text-sm font-medium px-6 h-full">
         Search
@@ -28,11 +35,14 @@
 
       <div class="relative cursor-pointer">
         <mat-icon>shopping_cart</mat-icon>
-        <span
-          class="absolute -top-2 -right-2 bg-orange-500 text-white text-xs px-1.5 py-0.5 rounded-full"
-        >
-          3
-        </span>
+
+        @if (cartCount > 0) {
+          <span
+            class="absolute -top-2 -right-2 bg-orange-500 text-white text-xs px-1.5 py-0.5 rounded-full"
+          >
+            {{ cartCount }}
+          </span>
+        }
       </div>
     </div>
   </div>

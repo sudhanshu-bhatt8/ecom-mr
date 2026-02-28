@@ -18,9 +18,14 @@
   <app-promo-prd [promoPrd]="this.promoProduct"></app-promo-prd>
 }
 
+<!-- promotion banner -->
+
 @if (groupedCategories.length && category) {
   @for (group of groupedCategories; track group.category.id) {
     <app-category-block [category]="group.category" [products]="group.products">
     </app-category-block>
   }
 }
+
+<!-- images  -->
+<app-featuers></app-featuers>
