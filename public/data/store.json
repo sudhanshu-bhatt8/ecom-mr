@@ -1,0 +1,229 @@
+{
+  "heroBanners": [
+    {
+      "id": "hero-1",
+      "subtitle": "New Product",
+      "title": "HAND WATCH ROSSINI",
+      "buttonText": "Buy Now",
+      "image": "assets/images/banners/hero-1.jpg"
+    }
+  ],
+
+  "heroSidePromos": [
+    {
+      "id": "side-1",
+      "title": "Black Friday",
+      "subtitle": "Buy 1 Get 1",
+      "image": "assets/images/banners/side-1.jpg"
+    },
+    {
+      "id": "side-2",
+      "title": "ION Alkaline",
+      "subtitle": "Micronutrient Supplements",
+      "image": "assets/images/banners/side-2.jpg"
+    }
+  ],
+
+  "heroBottomPromos": [
+  {
+    "id": "bottom-1",
+    "category": "Wine",
+    "title": "Drunkenness",
+    "subtitle": "Deep Flavor"
+  },
+  {
+    "id": "bottom-2",
+    "category": "Cosmetic",
+    "title": "MAXIMI",
+    "subtitle": "Sale 50%"
+  },
+  {
+    "id": "bottom-3",
+    "category": "Sunglasses",
+    "title": "Authentic",
+    "subtitle": "Sale off 50%"
+  },
+  {
+    "id": "bottom-4",
+    "category": "Hand Wash",
+    "title": "Clean hands",
+    "subtitle": "Clean bacteria"
+  },
+  {
+    "id": "bottom-5",
+    "category": "Fashion",
+    "title": "Nice bag",
+    "subtitle": "Nice style"
+  }
+] , 
+
+  "herSaleBanner" : 
+    {
+      "id": "saleSide-1",   
+      "product" : "Azus" ,
+      "title": "Laptop Gaming",
+      "subtitle": "Supper Sale",
+      "image": "assets/images/banners/saleSide-1.jpg"
+    }
+   , 
+
+  "categories": [
+    { "id": 1, "name": "Technology", "icon": "memory" },
+    { "id": 2, "name": "Watch", "icon": "watch" },
+    { "id": 3, "name": "Cosmetics", "icon": "spa" },
+    { "id": 4, "name": "Real Estate", "icon": "apartment" },
+    { "id": 5, "name": "Luxury Food", "icon": "restaurant" },
+    { "id": 6, "name": "Fashion", "icon": "checkroom" }
+  ],
+
+  "products": [
+    {
+      "id": "tech-1",
+      "title": "Apple Macbook Pro 2020",
+      "price": 2149.99,
+      "oldPrice": 2499.99,
+      "categoryId": 1,
+      "image": "assets/images/products/tech-1.jpg",
+      "stock": 120,
+      "badge": "sale"
+    },
+    {
+      "id": "tech-2",
+      "title": "Apple Macbook Air M2",
+      "price": 1099.00,
+      "categoryId": 1,
+      "image": "assets/images/products/tech-2.jpg",
+      "stock": 80,
+      "badge": "new"
+    },
+    {
+      "id": "watch-1",
+      "title": "Apple Watch Series 5",
+      "price": 517.79,
+      "categoryId": 2,
+      "image": "assets/images/products/watch-1.jpg",
+      "stock": 150,
+      "badge": "hot"
+    },
+    {
+      "id": "watch-2",
+      "title": "Hand Watch Rossini",
+      "price": 193.31,
+      "categoryId": 2,
+      "image": "assets/images/products/watch-2.jpg",
+      "stock": 60
+    },
+    {
+      "id": "cos-1",
+      "title": "Skin Care Cream",
+      "price": 29.99,
+      "categoryId": 3,
+      "image": "assets/images/products/cos-1.jpg",
+      "stock": 200,
+      "badge": "new"
+    },
+    {
+      "id": "cos-2",
+      "title": "Luxury Face Serum",
+      "price": 49.99,
+      "oldPrice": 69.99,
+      "categoryId": 3,
+      "image": "assets/images/products/cos-2.jpg",
+      "stock": 140,
+      "badge": "sale"
+    },
+    {
+      "id": "estate-1",
+      "title": "Luxury Apartment NYC",
+      "price": 450000,
+      "categoryId": 4,
+      "image": "assets/images/products/estate-1.jpg",
+      "stock": 5
+    },
+    {
+      "id": "estate-2",
+      "title": "Beach House California",
+      "price": 820000,
+      "categoryId": 4,
+      "image": "assets/images/products/estate-2.jpg",
+      "stock": 2
+    },
+    {
+      "id": "food-1",
+      "title": "Premium Chocolate Box",
+      "price": 59.99,
+      "categoryId": 5,
+      "image": "assets/images/products/food-1.jpg",
+      "stock": 300
+    },
+    {
+      "id": "food-2",
+      "title": "Luxury Organic Honey",
+      "price": 24.99,
+      "categoryId": 5,
+      "image": "assets/images/products/food-2.jpg",
+      "stock": 180
+    },
+    {
+      "id": "fashion-1",
+      "title": "Designer Handbag",
+      "price": 299.99,
+      "categoryId": 6,
+      "image": "assets/images/products/fashion-1.jpg",
+      "stock": 75,
+      "badge": "hot"
+    },
+    {
+      "id": "fashion-2",
+      "title": "Premium Leather Jacket",
+      "price": 499.99,
+      "oldPrice": 599.99,
+      "categoryId": 6,
+      "image": "assets/images/products/fashion-2.jpg",
+      "stock": 40,
+      "badge": "sale"
+    }
+  ],
+
+  "promoProducts": [
+    {
+      "id": "promo-1",
+      "title": "Apple Macbook Air 2020",
+      "price": 1099,
+      "oldPrice": 1299,
+      "image": "assets/images/products/tech-2.jpg",
+      "stock": 300,
+      "sold": 120
+    },
+    {
+      "id": "promo-2",
+      "title": "Apple Watch Series 5",
+      "price": 514.51,
+      "oldPrice": 599.99,
+      "image": "assets/images/products/watch-1.jpg",
+      "stock": 300,
+      "sold": 180
+    }
+  ],
+
+  "features": [
+    {
+      "id": "feature-1",
+      "title": "Free Shipping",
+      "description": "Free shipping on all orders over $100",
+      "icon": "local_shipping"
+    },
+    {
+      "id": "feature-2",
+      "title": "Cash Back",
+      "description": "100% money back guarantee",
+      "icon": "paid"
+    },
+    {
+      "id": "feature-3",
+      "title": "24/7 Support",
+      "description": "Dedicated support team",
+      "icon": "support_agent"
+    }
+  ]
+}

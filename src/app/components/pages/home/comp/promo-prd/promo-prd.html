@@ -1,0 +1,94 @@
+<div class="w-70 mx-auto px-6 mt-16">
+  <!-- HEADER -->
+  <div class="flex justify-between items-center mb-8">
+    <h2 class="text-xl font-semibold">Promo Product</h2>
+    <span class="text-green-500 text-sm cursor-pointer">See All</span>
+  </div>
+
+  <!-- GRID -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    @for (item of promoPrd; track item.id) {
+      <div class="bg-white rounded-xl shadow-md p-6 flex gap-8 items-stretch relative">
+        <!-- DISCOUNT -->
+        @if (item.oldPrice) {
+          <span class="absolute top-5 left-5 bg-orange-500 text-white text-xs px-3 py-1 rounded">
+            -{{ getDiscountPercentage(item.price, item.oldPrice) }}%
+          </span>
+        }
+
+        <!-- LEFT IMAGE -->
+        <div class="w-[40%] bg-gray-100 rounded-lg flex items-center justify-center">
+          <img [src]="item.image" alt="" class="max-h-56 object-contain" />
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="w-[60%] flex flex-col justify-between">
+          <!-- TOP CONTENT -->
+          <div>
+            <h3 class="text-base font-medium mb-3">
+              {{ item.title }}
+            </h3>
+
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-xl font-semibold"> ${{ item.price }} </span>
+
+              @if (item.oldPrice) {
+                <span class="text-sm text-gray-400 line-through"> ${{ item.oldPrice }} </span>
+              }
+            </div>
+
+            <!-- STOCK TEXT -->
+            <div class="flex justify-between text-sm text-gray-500 mb-2">
+              <span>Sold: {{ item.sold }}</span>
+              <span>In Stock: {{ item.stock }}</span>
+            </div>
+
+            <!-- PROGRESS -->
+            <div class="w-full bg-gray-200 h-1.5 rounded-full mb-6">
+              <div
+                class="bg-green-500 h-1.5 rounded-full"
+                [style.width.%]="getProgress(item.sold, item.stock)"
+              ></div>
+            </div>
+
+            <!-- TIMER -->
+            <div class="flex items-center gap-3 text-center mb-6 w-full">
+              <div>
+                <div class="bg-gray-100 px-4 py-2 rounded-md text-sm font-medium">123</div>
+                <div class="text-xs text-gray-500 mt-1">Day</div>
+              </div>
+
+              <span>:</span>
+
+              <div>
+                <div class="bg-gray-100 px-4 py-2 rounded-md text-sm font-medium">42</div>
+                <div class="text-xs text-gray-500 mt-1">Hour</div>
+              </div>
+
+              <span>:</span>
+
+              <div>
+                <div class="bg-gray-100 px-4 py-2 rounded-md text-sm font-medium">00</div>
+                <div class="text-xs text-gray-500 mt-1">Min</div>
+              </div>
+
+              <span>:</span>
+
+              <div>
+                <div class="bg-gray-100 px-4 py-2 rounded-md text-sm font-medium">08</div>
+                <div class="text-xs text-gray-500 mt-1">Sec</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BUTTON -->
+          <button
+            class="bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-medium transition"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+    }
+  </div>
+</div>

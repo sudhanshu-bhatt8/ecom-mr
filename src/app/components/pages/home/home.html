@@ -1,6 +1,26 @@
-<app-hero-prod-section
-  [heroBanners]="heroBanners$ | async"
-  [heroSidePromos]="heroSidePromos$ | async"
-  [heroSaleBanner]="heroSaleBanner$ | async"
->
-</app-hero-prod-section>
+@if (heroBanners.length) {
+  <app-hero-prod-section
+    [heroBanners]="heroBanners"
+    [heroSidePromos]="heroSidePromos"
+    [heroSaleBanner]="heroSaleBanner"
+    [heroBottomPromos]="heroBottomPromos"
+  >
+  </app-hero-prod-section>
+}
+
+<!-- category section  -->
+@if (category.length) {
+  <app-category-section [category]="category" [product]="product"></app-category-section>
+}
+
+<!-- promo prd-->
+@if (promoProduct) {
+  <app-promo-prd [promoPrd]="this.promoProduct"></app-promo-prd>
+}
+
+@if (groupedCategories.length && category) {
+  @for (group of groupedCategories; track group.category.id) {
+    <app-category-block [category]="group.category" [products]="group.products">
+    </app-category-block>
+  }
+}

@@ -1,0 +1,51 @@
+<div class="w-70 mx-auto px-6 mt-16">
+  <!-- HEADER -->
+  <div class="flex justify-between items-center mb-6">
+    <h2 class="text-lg font-semibold">
+      {{ category.name }}
+    </h2>
+
+    <div class="flex items-center gap-6 text-sm text-gray-500">
+      <span class="text-green-500 cursor-pointer">All</span>
+      <span class="cursor-pointer hover:text-black">Smart watch</span>
+      <span class="cursor-pointer hover:text-black">Laptop</span>
+      <span class="cursor-pointer hover:text-black">Tablet</span>
+      <span class="cursor-pointer hover:text-black">Desktop</span>
+      <span class="cursor-pointer hover:text-black">Accessories</span>
+    </div>
+  </div>
+
+  <!-- PRODUCT GRID -->
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+    @for (item of products.slice(0, 6); track item.id) {
+      <div class="rounded-lg p-4 hover:shadow-md transition relative">
+        @if (item.badge) {
+          <span
+            class="absolute top-3 left-3 text-xs px-2 py-1 rounded text-white"
+            [ngClass]="{
+              'bg-green-500': item.badge === 'new',
+              'bg-orange-500': item.badge === 'sale',
+              'bg-yellow-400 text-black': item.badge === 'hot',
+            }"
+          >
+            {{ item.badge | titlecase }}
+          </span>
+        }
+
+        <div class="aspect-square bg-gray-100 rounded mb-3 flex items-center justify-center">
+          <img [src]="item.image" class="max-h-28 object-contain" />
+        </div>
+
+        <p class="text-sm font-medium mb-1 line-clamp-2">
+          {{ item.title }}
+        </p>
+
+        <div class="text-sm font-semibold">${{ item.price }}</div>
+
+        @if (item.oldPrice) {
+          <div class="text-xs text-gray-400 line-through">${{ item.oldPrice }}</div>
+        }
+      </div>
+    }
+  </div>
+</div>
