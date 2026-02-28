@@ -15,7 +15,6 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@ngx-env/builder:application",
           "options": {
             "browser": "src/main.ts",
             "polyfills": [
